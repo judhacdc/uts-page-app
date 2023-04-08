@@ -1,0 +1,6 @@
+dokumentasi next js https://nextjs.org/docs/basic-features/built-in-css-support
+
+home       ==> home
+about      ==> users
+portofolio ==> product
+contact    ==> admin

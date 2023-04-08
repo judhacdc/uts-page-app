@@ -1,0 +1,144 @@
+// file ini di gunakan untuk mengatur style css yang akan di gunakan pada aplikasi
+
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    // ukuran font default
+    font-size: 18px;
+}
+
+a[href] {
+    // biar linknya ga berubah warna
+    color: #000;
+}
+
+// biar agak tab 
+.container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar {
+    margin-top: 50px;
+
+    .container {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 28px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 600;
+        //biar gada garis dibawah
+        text-decoration: none;
+
+    }
+
+    // biar linknya berada di kanan
+    .nav-links {
+        display: flex;
+        margin-left: auto;
+        // ngilangin titik di list
+        list-style: none;
+
+        a[href] {
+
+            position: relative;
+            display: inline-block;
+            color: #000;
+            margin-left: 20px;
+            margin-right: 20px;
+            text-decoration: none;
+            transition: 0.3s;
+
+            &:active {
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    bottom: -10px;
+                    left: 0;
+                    width: 25px;
+                    height: 2px;
+                    background-color: #000;
+                    transition: 0.3s;
+                }
+
+
+                font-weight: bold;
+
+                &:after {
+                    bottom: -12px; // mengubah jarak antara garis dan teks ketika aktif
+                }
+
+            }
+
+            &:hover {
+                opacity: 0.5;
+            }
+
+
+        }
+    }
+}
+
+.hero {
+    padding-top: 0px;
+    padding-bottom: 100px;
+
+    .container {
+        display: flex;
+        // biar sejajar sama gamabr text nya
+        align-items: center;
+    }
+
+    .text-wrapper {
+        width: 50%;
+    }
+
+    .tittle {
+        font-size: 48px;
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+
+    .description {
+        font-size: 22px;
+        line-height: 40px;
+    }
+
+    // tombol
+    .cta {
+        display: inline-block;
+        padding: 15px 50px;
+        // warna button
+        background-color: #000;
+        // warna text
+        color: #fff;
+        // biar gada underline
+        text-decoration: none;
+        // biar rounded
+        border-radius: 5px;
+        margin-top: 20px;
+
+        transition: transform 0.3s ease-in-out;
+
+        // biar membesar
+        &:hover {
+            transform: scale(1.1);
+        }
+
+    }
+
+    // biar image sejajar
+    .img-wrapper {
+        margin-left: 1000000px;
+        width: 50%;
+        text-align: right;
+    }
+}
